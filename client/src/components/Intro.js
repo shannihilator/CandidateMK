@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import CodingChallengeOne from './CodingChallengeOne';
+import CodingChallengeTwo from './CodingChallengeTwo';
 
 const FlexBox = styled.div`
   display: flex;
@@ -44,6 +45,7 @@ const Instructions = () => (
     <h3 style={{textAlign: 'center'}}>
       Level Two
     </h3>
+    <CodingChallengeTwo/>
     <h3 style={{textAlign: 'center'}}>
       Level Three
     </h3>

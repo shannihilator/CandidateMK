@@ -18,9 +18,9 @@ export default class CodingChallengeOne extends Component {
 
   render() {
 
-    const people = this.state.peopleData.map((person) => {
+    const people = this.state.peopleData.map((person, i) => {
       return(
-        <div>
+        <div key={i}>
           first name:{person.first_name} last name:{person.last_name} email:{person.email_address} title: {person.title}
         </div>
       )
