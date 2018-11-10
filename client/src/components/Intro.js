@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import CodingChallengeOne from './CodingChallengeOne';
 
 const FlexBox = styled.div`
   display: flex;
@@ -37,22 +38,18 @@ const Logo = () => (
 const Instructions = () => (
   <InstructionsBox>
     <h3 style={{textAlign: 'center'}}>
-      Thank you for your interest in joining the SalesLoft Engineering team!
+      Level One
     </h3>
-    <p>
-      This app is built with a Rails backend and a React frontend,
-      use whatever you'd like out of this repo,
-      or any other framework/langauge. Refer to the
-      <a href="https://docs.google.com/document/d/1SbhRTd6ewr0w1rgE-nB8yk7LR1exy8rL0JJCMAwgfns/edit?ts=5a57d0ac"> instructions</a>.
-    </p>
-    <p style={{textAlign: 'center'}}>
-      API Documentation can be found at <a href="https://developers.salesloft.com">https://developers.salesloft.com</a>
-    </p>
+    <CodingChallengeOne/>
     <h3 style={{textAlign: 'center'}}>
-      Questions? Email us at engineeringjobs@salesloft.com
+      Level Two
+    </h3>
+    <h3 style={{textAlign: 'center'}}>
+      Level Three
     </h3>
   </InstructionsBox>
 )
+
 
 export const Intro = () => (
   <Box>
