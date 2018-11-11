@@ -18,6 +18,7 @@ const theme = {
   }
 };
 
+
 const App = ({ store }) => (
   <Provider store={store}>
     <ThemeProvider theme={theme}>

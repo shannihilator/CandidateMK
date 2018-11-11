@@ -47,3 +47,12 @@ bundle exec foreman start
 ```
 8.) Navigate to localhost:5000
 
+## difficulties
+
+1.) This was the first time I had to use a bearer token. I had the API working in Postman, but It took me a while to figure out how to get the API to work on localhost:5000. I went about this by creating a custom route. I decided to use Figaro to hide the API key. 
+```
+2.) I'm not too familiar with redux. I created my own state in the components I made by using axios calls to the api route.
+```
+3.) I usually use ES6 syntax. I was under the impression that ES6 and ES5 could co-exist, but the application kept breaking. I had to refresh myself on the syntax.
+```
+4.) Level 3 was challenging... 

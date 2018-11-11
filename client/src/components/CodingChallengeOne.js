@@ -21,7 +21,11 @@ export default class CodingChallengeOne extends Component {
     const people = this.state.peopleData.map((person, i) => {
       return(
         <div key={i}>
-          first name:{person.first_name} last name:{person.last_name} email:{person.email_address} title: {person.title}
+          <ul>
+            <li>{person.first_name} {person.last_name}</li> 
+            <div>email: {person.email_address}</div>
+            <div>title: {person.title}</div>
+          </ul>  
         </div>
       )
     })

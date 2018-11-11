@@ -13,7 +13,6 @@ const FlexBox = styled.div`
 
 const Box = styled.div`
   display: grid;
-  box-shadow: 0 0 6px 0 rgba(58,58,58,0.24);
   width: 827px;
   height: 485px;
   border-top: 6px solid #4a90e2;

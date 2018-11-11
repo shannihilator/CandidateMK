@@ -11,45 +11,49 @@ export default class CodingChallengeTwo extends Component {
   }
 
   componentDidMount() {
+    this.fetchData()
+  }
+
+  fetchData(){
     axios.get('/api/base')
-      .then((data) => {
-        var peopleDataEmail = [...this.state.peopleDataEmail]
-        for (let i = 0; i < data.data.data.length; i++) {
-          peopleDataEmail.push(data.data.data[i].email_address)
-        }
-        this.setState({ peopleDataEmail })
+    .then((data) => {
+      var peopleDataEmail = [...this.state.peopleDataEmail]
+      for (let i = 0; i < data.data.data.length; i++) {
+        peopleDataEmail.push(data.data.data[i].email_address)
       }
-      )
+      this.setState({ peopleDataEmail })
+      }
+    )
   }
 
   onClick() {
     var peopleDataEmail = [...this.state.peopleDataEmail]
-    var hello = peopleDataEmail.join("").split('')
-      .reduce((total, letter) => {
-        total[letter] ? total[letter]++ : total[letter] = 1;
-        return total
+    var emailInOneString = peopleDataEmail.join("").split('')
+    var letterCount = emailInOneString.reduce((count, character) => {
+        count[character] ? count[character]++ : count[character] = 1;
+        return count
       }, {})
-    console.log(hello)
-    this.setState({ letterCount: hello })
+    this.setState({ letterCount })
   }
+
+
 
   render() {
 
-    var plzWork = Object.entries(this.state.letterCount).map(([key, value]) => {
+    var characterCountDisplay = Object.entries(this.state.letterCount).map(([key, value], i) => {
       return (
-        <div>
+        <div key={i}>
           {key} : {value}
         </div>
       )
     })
     return (
       <div>
-        Character
-        Count
-        {plzWork}
-        <div>
-          <button onClick={() => this.onClick()}> hello </button>
-        </div>
+        
+          <div>Character Count For Emails</div>
+          <div>{characterCountDisplay}</div>
+          <button onClick={() => this.onClick()}> Show Character Count </button>
+        
       </div>
     )
   }
