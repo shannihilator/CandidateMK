@@ -10,7 +10,11 @@ export default class CodingChallengeOne extends Component {
     }
   
   componentDidMount(){
-   axios.get('/api/base')
+    this.fetchData()
+  }
+
+  fetchData(){
+    axios.get('/api/base')
     .then((data) => {
       this.setState({peopleData:data.data.data})
     })
